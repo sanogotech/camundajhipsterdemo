@@ -6,6 +6,40 @@ This application was generated using JHipster 6.10.4, you can find documentation
 
 https://docs.camunda.org/get-started/spring-boot/project-setup/
 
+
+https://blog.ippon.fr/2018/01/04/gestion-des-processus-metiers-embarquer-un-moteur-bpm-dans-votre-application-jhipster/
+
+```
+<properties>
+   <camunda.springboot.version>7.14.0</camunda.springboot.version>
+</properties>
+
+
+<dependency>
+   <groupId>org.camunda.bpm.springboot</groupId>
+   <artifactId>camunda-bpm-spring-boot-starter</artifactId>
+   <version>${camunda.springboot.version}</version>
+</dependency>
+<dependency>
+   <groupId>org.camunda.bpm.springboot</groupId>
+   <artifactId>camunda-bpm-spring-boot-starter-webapp</artifactId>
+   <version>${camunda.springboot.version}</version>
+</dependency>
+
+
+```
+
+
+```
+.antMatchers("/api/cockpit/**").permitAll()
+.antMatchers("/api/tasklist/**").permitAll()
+.antMatchers("/api/engine/**").permitAll()
+.antMatchers("/api/admin/**").permitAll()
+
+```
+
+http://localhost:8080/app/
+
 ## Development
 
 Before you can build this project, you must install and configure the following dependencies on your machine:
